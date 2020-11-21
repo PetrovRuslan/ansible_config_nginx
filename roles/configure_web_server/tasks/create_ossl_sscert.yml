@@ -1,10 +1,14 @@
 ---
+- name: add epel-release
+  yum: name=epel-release state=installed
+  
 - name: install pip
   yum: name=python-pip state=installed
 
 - name: install PyOpenSSL 
   pip:
     name: PyOpenSSL
+    
 - name: create folder for ssl cert
   file:
     path: /etc/ssl/flask_app
