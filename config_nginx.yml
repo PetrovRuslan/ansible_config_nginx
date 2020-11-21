@@ -1,0 +1,7 @@
+---
+- name: Install nginx with ssl
+  hosts: server1
+  become: yes
+
+  roles: 
+    - configure_web_server
