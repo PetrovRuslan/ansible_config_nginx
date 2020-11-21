@@ -42,9 +42,8 @@
 
 ## db-[99:101]-node.example.com
 
-[test_servers]
-server1	ansible_host=192.168.2.13	owner=Vasya
-
-[prod_servers]
-server2	ansible_host=192.168.2.14	owner=Ivan
-server3 ansible_host=192.168.2.17	owner=Gleb
+server1	ansible_host=10.90.137.237
+server2	ansible_host=10.90.137.238
+server3 ansible_host=10.90.137.239
+server4 ansible_host=10.90.137.240
+server5 ansible_host=10.90.137.242
