@@ -5,8 +5,17 @@
 - name: install nginx
   yum: name=nginx state=installed
 
+- name: create folder for ssl cert
+  file:
+    path: /etc/ssl/flask_app
+    state: directory
+
 - name: Copy nginx config
   copy: src=./roles/configure_web_server/files/nginx.conf dest=/etc/nginx/nginx.conf
+  notify: Restart nginx
+
+- name: Generate index.html
+  template: src=index.j2 dest=/var/www/flask_app/index.html
   notify: Restart nginx
 
 - name: started nginx and enabled start on boot
