@@ -14,7 +14,7 @@
   template: src=index.j2 dest=/var/www/flask_app/index.html
   notify: Restart nginx
 
-- name: Generate index.html
+- name: Generate nginx.conf
   template: src=nginx.j2 dest=/etc/nginx/nginx.conf
   notify: Restart nginx  
 
