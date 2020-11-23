@@ -1,6 +1,6 @@
 ---
 - name: Install nginx with ssl
-  hosts: web-servers
+  hosts: web_servers
   become: yes
 
   roles: 

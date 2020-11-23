@@ -1,6 +1,6 @@
 ---
 - name: Install nginx as balancer
-  hosts: nginx-balancer
+  hosts: nginx_balancer
   become: yes
 
   roles: 
