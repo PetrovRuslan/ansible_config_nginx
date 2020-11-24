@@ -1,0 +1,18 @@
+---
+- name: install docker engine
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: install yum utils
+    yum: name=yum-utils state=installed
+
+  - name: Add docker repository
+    shell: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+  - name: Install docker
+    yum: name={{ item }} state=installed
+    loop:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
