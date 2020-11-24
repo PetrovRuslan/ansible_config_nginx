@@ -45,7 +45,7 @@
 server1	ansible_host=10.90.137.237
 server2	ansible_host=10.90.137.238
 server3 ansible_host=10.90.137.239
-server4 ansible_host=10.90.137.240
+server4 ansible_host=10.90.138.66
 server5 ansible_host=10.90.137.242
 
 [web_servers]
