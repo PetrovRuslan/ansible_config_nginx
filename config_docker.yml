@@ -16,3 +16,6 @@
       - docker-ce
       - docker-ce-cli
       - containerd.io
+
+  - name: Start docker.service and enabled boot start
+    service: name=docker state=started enabled=yes
